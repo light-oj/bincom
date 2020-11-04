@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Bincom Polling Unit Results{% endblock %}
+
+{% block content %}
+    <h1>Delta State Polling Unit Result List</h1>
+
+    {% for result in qs %}
+        <p>
+        <a href="{{ result.get_absolute_url }}">
+        {{ result.polling_unit_uniqueid }} 
+        </a>{{ result.party_abbreviation }} {{ result.party_score }}
+        </p>
+    {% endfor %}
+{% endblock %}
