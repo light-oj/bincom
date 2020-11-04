@@ -3,6 +3,8 @@
 {% block title %}Bincom Polling Unit Results{% endblock %}
 
 {% block content %}
+<h3><a href="{% url 'results:poll-create' %}">Click here to Create Polling Unit</a></h3>
+<h3><a href="{% url 'results:pu-create' %}">Click here to Create New PU result</a></h3>
     <h1>Delta State Polling Unit Result List</h1>
 
     {% for result in qs %}
